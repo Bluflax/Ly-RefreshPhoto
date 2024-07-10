@@ -1,0 +1,109 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    max-width: 240px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.card img {
+    position: absolute;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mimic {
+    filter: blur(100px);
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: none;
+}
+
+.mimicready {
+    opacity: 1;
+    transition: opacity 0.15s ease-out;
+}
+
+.mimicAnimated {
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.5s ease-out, filter 0.8s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+.ripple {
+    z-index: 9;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 0px;
+    left: 50%;
+    right: auto;
+    border: 15px solid #ffffff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    mix-blend-mode: overlay;
+    filter: blur(3px);
+    transform: translateX(-50%);
+    transform-origin: left center;
+    transition: none;
+}
+
+.rippleAnimated {
+    transform: scale(24) translateX(-50%);
+    transition: transform 2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.8s ease-out;
+}
+
+.animatefadeout {
+    opacity: 0;
+}
+
+.after {
+    opacity: 0;    
+}
+
+.shown {
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+}
+
+.button {
+    position: fixed;
+    bottom: 50px;
+}
+
+.background img {
+    z-index: -1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+}
