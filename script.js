@@ -83,7 +83,7 @@ function refreshUXAnimated () {
         imgAFTER.classList.add('shown');
         imgMIMIC.classList.add('mimicAnimated');
         //container.style.mixBlendMode = 'normal';
-    }, 150);
+    }, 100);
     setTimeout(() => {
         ripple.classList.add('animatefadeout');
         ripple2.classList.add('animatefadeout');
