@@ -86,7 +86,7 @@ main {
     mix-blend-mode: overlay;
     opacity: 0.9;
     filter: blur(4px);
-    transform: translate(-50%, -250%);
+    transform: translate(-50%, 350%);
     transition: none;
 }
 
