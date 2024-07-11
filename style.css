@@ -121,7 +121,7 @@ main {
 
 .shown {
     opacity: 1;
-    transition: opacity 0.4s ease-out;
+    transition: opacity 0.25s ease-out;
 }
 
 .button {
