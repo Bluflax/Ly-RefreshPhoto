@@ -104,8 +104,8 @@ function reUXReverse () {
 
 jsmain();
 
-    setTimeout(() => {
-        reUXReverse();
-        refreshUXAnimated();
-    }, 4000);
+window.onload = function () {
+    reUXReverse();
+    refreshUXAnimated();
+}
 
