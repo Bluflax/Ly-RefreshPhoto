@@ -54,7 +54,7 @@ async function fetchContent(url) {
             imgAFTER.innerHTML = '<img src="' + srcAURL + '"/>';
             imgBEFORE.innerHTML = '<img src="' + srcBURL + '"/>';
             imgMIMIC.innerHTML = '<img src="' + srcAURL + '"/>';
-            bg.innerHTML = '<img src="' + srcAURL + '"/>';
+            bg.innerHTML = '<img src="' + srcBURL + '"/>';
         }
     } catch (error) {
         console.error('Fetch error:', error);
