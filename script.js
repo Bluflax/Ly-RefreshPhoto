@@ -74,6 +74,7 @@ function jsmain() {
 }
 
 function refreshUXAnimated () {
+    clearTimeout(Onloadtimeout);
     imgMIMIC.classList.add('mimicready');
     imgMIMIC.classList.add('zinvisible');
     ripple.classList.add('rippleAnimated');
@@ -105,7 +106,7 @@ function reUXReverse () {
 jsmain();
 
 window.onload = function () {
-    setTimeout(() => {
+    Onloadtimeout = setTimeout(() => {
         reUXReverse();
         refreshUXAnimated();
     }, 1200);
