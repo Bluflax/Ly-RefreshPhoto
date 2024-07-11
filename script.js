@@ -78,9 +78,9 @@ function refreshUXAnimated () {
     imgMIMIC.classList.add('zinvisible');
     ripple.classList.add('rippleAnimated');
     ripple2.classList.add('rippleAnimated');
-    imgAFTER.classList.add('shown');
     //container.style.mixBlendMode = 'color-dodge';
     setTimeout(() => {
+        imgAFTER.classList.add('shown');
         imgMIMIC.classList.add('mimicAnimated');
         //container.style.mixBlendMode = 'normal';
     }, 150);
