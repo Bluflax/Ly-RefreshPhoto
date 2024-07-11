@@ -2,7 +2,10 @@ const imgBEFORE = document.getElementById('imgbefore');
 const imgAFTER = document.getElementById('imgafter');
 const imgMIMIC = document.getElementById('imgmimic');
 const ripple = document.getElementById('ripple');
+const ripple2 = document.getElementById('ripple2');
 const bg = document.getElementById('background');
+const container = document.getElementById('container');
+const rev = document.getElementById('triggeranimation');
 //const theurl = 'https://www.google.com/';
 //const theurl = 'https://twitter.com';
 //const theurl = 'https://zhere.next';
@@ -72,20 +75,30 @@ function jsmain() {
 
 function refreshUXAnimated () {
     imgMIMIC.classList.add('mimicready');
+    imgMIMIC.classList.add('zinvisible');
     ripple.classList.add('rippleAnimated');
+    ripple2.classList.add('rippleAnimated');
     imgAFTER.classList.add('shown');
+    //container.style.mixBlendMode = 'color-dodge';
     setTimeout(() => {
         imgMIMIC.classList.add('mimicAnimated');
+        //container.style.mixBlendMode = 'normal';
     }, 150);
     setTimeout(() => {
         ripple.classList.add('animatefadeout');
+        ripple2.classList.add('animatefadeout');
         imgMIMIC.classList.remove('mimicAnimated');
         imgMIMIC.classList.remove('mimicready');
+        rev.style.opacity = '1';
     }, 1000);
-    setTimeout(() => {
-        ripple.classList.remove('rippleAnimated');
-        ripple.classList.remove('animatefadeout');
-    }, 1800);
+}
+
+function reUXReverse () {
+    ripple.classList = 'ripple';
+    ripple2.classList = 'ripple'
+    imgMIMIC.classList = 'card mimic';
+    imgAFTER.classList = 'card after';
+    rev.style.opacity = '0';
 }
 
 

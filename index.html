@@ -8,24 +8,25 @@
 </head>
 <body>
     <main>
-        <div class="container">
+        <div class="container" id="container">
             <div class="ripple" id="ripple"></div>
-
-            <div class="card before" id="imgbefore">
-                <img src="images/logo.png">
+            <div class="ripple" id="ripple2"></div>
+            <div class="card before" id="imgbefore" >
+                LOADING
             </div>
             
             <div class="card after" id="imgafter">
             </div>
 
-            <div class="card mimic" id="imgmimic">
+            <div class="card mimic" id="imgmimic" onclick="refreshUXAnimated()">
             </div>
 
         </div>
-        <div class="button" id="triggeranimation" onclick="refreshUXAnimated()">
-            trigger
+        <div class="button" id="triggeranimation" onclick="reUXReverse()">
+            REVERSE
         </div>
     </main>
+    <div class="blurred"></div>
     <div class="background" id="background">
 
     </div>

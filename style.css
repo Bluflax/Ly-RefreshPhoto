@@ -2,6 +2,9 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
+    user-select: none;
+    color: #fff;
+    font-family: 'EL', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main {
@@ -16,42 +19,58 @@ main {
 }
 
 .container {
-    display: block;
-    position: absolute;
-    width: 100%;
-    max-width: 240px;
-    height: 100px;
-    top: 0;
-    left: 0;
+    position: relative;
+    width: auto;
+    height: auto;
     overflow: hidden;
+    border: 8px solid #fff;
+    border-radius: 20px;
+    transition: transform 0.5s cubic-bezier(00.800, 0, 0.420, 1.000);
+}
+
+.transition {
+    mix-blend-mode: color-dodge;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .card img {
-    position: absolute;
+    display: block;
     width: 100%;
     max-width: 240px;
     height: auto;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
 }
 
 .mimic {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     filter: blur(100px);
     mix-blend-mode: screen;
     opacity: 0;
     transition: none;
+    cursor: pointer;
 }
 
 .mimicready {
+    display: block;
     opacity: 1;
     transition: opacity 0.15s ease-out;
+    cursor: default;
 }
 
 .mimicAnimated {
-    filter: blur(10px);
+    filter: blur(20px);
     opacity: 0;
-    transition: opacity 0.5s ease-out, filter 0.8s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    transition: opacity 0.4s ease-out, filter 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000);
 }
 
 .ripple {
@@ -59,21 +78,20 @@ main {
     position: absolute;
     width: 80px;
     height: 80px;
-    top: 0px;
+    top: 0%;
     left: 50%;
-    right: auto;
-    border: 15px solid #ffffff;
+    border: 20px solid #ffffff;
     border-radius: 50%;
     box-sizing: border-box;
     mix-blend-mode: overlay;
-    filter: blur(3px);
-    transform: translateX(-50%);
-    transform-origin: left center;
+    opacity: 0.9;
+    filter: blur(4px);
+    transform: translate(-50%, -200%);
     transition: none;
 }
 
 .rippleAnimated {
-    transform: scale(24) translateX(-50%);
+    transform: translate(-50%, -50%) scale(28);
     transition: transform 2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.8s ease-out;
 }
 
@@ -82,28 +100,59 @@ main {
 }
 
 .after {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     opacity: 0;    
+    transition: opacity 0.1s ease-out;
+
+}
+
+.before {
+    z-index: 1;
+}
+
+.zinvsible {
+    z-index: -3;
 }
 
 .shown {
     opacity: 1;
-    transition: opacity 0.2s ease-out;
+    transition: opacity 0.4s ease-out;
 }
 
 .button {
     position: fixed;
     bottom: 50px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.blurred {
+    z-index: -1;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(150px) saturate(2) brightness(0.4);
 }
 
 .background img {
-    z-index: -1;
+    z-index: -2;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translateX(-50%) translateY(-50%);
-    object-fit: cover;
+    top: 0%;
+    left: 0%;
+    width: 110%;
+    height: 110%;
+    transform: translateX(-5%) translateY(-5%);
+}
+
+@font-face {
+    font-family: 'EL';
+    src: url(electrolize.ttf);
 }
