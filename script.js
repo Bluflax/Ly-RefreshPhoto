@@ -74,7 +74,7 @@ function jsmain() {
 }
 
 function refreshUXAnimated () {
-    clearTimeout(Onloadtimeout);
+    //clearTimeout(Onloadtimeout);
     imgMIMIC.classList.add('mimicready');
     imgMIMIC.classList.add('zinvisible');
     ripple.classList.add('rippleAnimated');
