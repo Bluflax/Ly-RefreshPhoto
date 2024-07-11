@@ -139,7 +139,6 @@ main {
     left: 0%;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(150px) saturate(2) brightness(0.9);
 }
 
 .background img {
@@ -147,9 +146,10 @@ main {
     position: fixed;
     top: 0%;
     left: 0%;
-    width: 110%;
-    height: 110%;
-    opacity: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    filter: blur(150px) saturate(2) brightness(0.8);
     transform: translateX(-5%) translateY(-5%);
 }
 
