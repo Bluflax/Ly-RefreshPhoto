@@ -63,7 +63,7 @@ main {
 .mimicready {
     display: block;
     opacity: 0.7;
-    transition: opacity 0.15s ease-out;
+    transition: opacity 0.1s ease-out;
     cursor: default;
 }
 
