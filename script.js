@@ -109,6 +109,6 @@ window.onload = function () {
     Onloadtimeout = setTimeout(() => {
         reUXReverse();
         refreshUXAnimated();
-    }, 1200);
+    }, 3000);
 }
 
