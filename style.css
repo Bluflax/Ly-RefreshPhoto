@@ -21,10 +21,9 @@ main {
 }
 
 .container {
-    position: fixed;
+    position: relative;
     width: auto;
     height: auto;
-    top: 10%;
     overflow: hidden;
     border: 8px solid #000;
     border-radius: 25px;
