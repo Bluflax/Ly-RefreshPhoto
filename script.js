@@ -81,10 +81,12 @@ function refreshUXAnimated () {
     ripple2.classList.add('rippleAnimated');
     //container.style.mixBlendMode = 'color-dodge';
     setTimeout(() => {
-        imgAFTER.classList.add('shown');
         imgMIMIC.classList.add('mimicAnimated');
         //container.style.mixBlendMode = 'normal';
     }, 100);
+    setTimeout(() => {
+        imgAFTER.classList.add('shown');
+    }, 50);
     setTimeout(() => {
         ripple.classList.add('animatefadeout');
         ripple2.classList.add('animatefadeout');
